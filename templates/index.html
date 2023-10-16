@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Demo Project</title>
+</head>
+<body>
+<h1>Our tasks</h1>
+{% for i in my_datas %}
+<h4>{{i.name}}</h4>
+<h4>{{i.age}}</h4>
+<h4>{{i.created_at}}</h4>
+<h4>{{i.updated_at}}</h4>
+{% endfor %}
+</body>
+</html>
