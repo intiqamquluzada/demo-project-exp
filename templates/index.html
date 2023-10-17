@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>Our tasks</h1>
+
 {% for i in my_datas %}
-<h4>{{i.name}}</h4>
-<h4>{{i.age}}</h4>
-<h4>{{i.created_at}}</h4>
-<h4>{{i.updated_at}}</h4>
+<h4><a href="{% url 'detail' i.id %}">{{i.name}}</a></h4>
 {% endfor %}
+
+
 </body>
 </html>
