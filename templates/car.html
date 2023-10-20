@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+{% for i in my_datas %}
+<h3>{{i.name}}</h3>
+<h3>{{i.year}}</h3>
+<h3>{{i.cat.name}}</h3>
+{% for j in i.masters.all %}
+<h1 style="color:red;">{{j.name}}</h1>
+{% endfor %}
+{% for a in i.carimages_set.all %}
+<img src="{{a.image.url}}" />
+{% endfor %}
+<hr>
+{% endfor %}
+
+</body>
+</html>

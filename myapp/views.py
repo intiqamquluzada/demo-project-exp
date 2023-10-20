@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render
-from myapp.models import MyModel
+from myapp.models import MyModel, Car
 
 
 
@@ -30,3 +30,12 @@ def detail_view(request, id):
         "my_obj": my_obj,
     }
     return render(request, "detail.html", context)
+
+
+def car_view(request):
+    my_datas = Car.objects.all()
+    context = {
+        "my_datas": my_datas,
+    }
+    return render(request, "car.html", context)
+
